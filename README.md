@@ -1,12 +1,13 @@
 ## <b>Installation</b>
 
 Open a terminal - Type the following commands (Or copy) -
-
+```
 wget https://raw.githubusercontent.com/CleanMachine1/Linux-DNS-Set/master/main.sh
 
 sudo chmod +x main.sh 
 
 sudo ./main.sh
+```
 
 <details>
 <summary>Why do I need Sudo</summary>
