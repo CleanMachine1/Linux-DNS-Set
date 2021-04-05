@@ -3,7 +3,7 @@
 sudo apt update && sudo apt install resolvconf -y
 sudo systemctl enable resolvconf.service && sudo systemctl start resolvconf.service
 read -p "Enter DNS IP Primary: " ip1
-sudo echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
+echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
 sudo systemctl restart resolvconf.service
 sudo resolvconf --enable-updates
 sudo resolvconf -u
