@@ -8,9 +8,9 @@ sudo systemctl restart resolvconf.service > /dev/null
 sudo resolvconf --enable-updates > /dev/null 
 sudo resolvconf -u > /dev/null 
 
-echo "\n\nIf you need to add another DNS IP"
-echo "\nType in the Input Section"
-echo "\nOR type 'exit' if you don't"
+echo "If you need to add another DNS IP \n"
+echo "Type in the Input Section \n"
+echo "OR type 'exit' if you don't"
 read -p "Input: " ans
 if [ $ans = "exit" ]; then
     exit
