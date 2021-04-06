@@ -2,16 +2,18 @@
 sudo apt install cowsay -y
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 sleep 3
+echo "\n \n \n"
 sudo apt update > /dev/null && sudo apt install resolvconf -y > /dev/null
 sudo systemctl enable resolvconf.service > /dev/null && sudo systemctl start resolvconf.service > /dev/null
+echo "\n \n \n"
 read -p "Enter DNS IP Primary: " ip1
 echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
 sudo systemctl restart resolvconf.service > /dev/null 
 sudo resolvconf --enable-updates > /dev/null 
 sudo resolvconf -u > /dev/null 
-
-echo "If you need to add another DNS IP \n"
-echo "Type in the Input Section \n"
+echo -e "\n \n \n"
+echo "If you need to add another DNS IP"
+echo "Type in the Input Section "
 echo "OR type 'exit' if you don't"
 read -p "Input: " ans
 if [ $ans = "exit" ]; then
