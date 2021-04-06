@@ -2,10 +2,10 @@
 sudo apt install cowsay -y
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 sleep 3
-echo "\n \n \n"
+echo -e "\n \n \n"
 sudo apt update > /dev/null && sudo apt install resolvconf -y > /dev/null
 sudo systemctl enable resolvconf.service > /dev/null && sudo systemctl start resolvconf.service > /dev/null
-echo "\n \n \n"
+echo -e "\n \n \n"
 read -p "Enter DNS IP Primary: " ip1
 echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
 sudo systemctl restart resolvconf.service > /dev/null 
