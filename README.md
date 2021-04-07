@@ -2,11 +2,12 @@
 
 Open a terminal - Type the following commands (Or copy) -
 ```
-wget https://raw.githubusercontent.com/CleanMachine1/Linux-DNS-Set/master/main.sh
+wget https://raw.githubusercontent.com/CleanMachine1/Linux-DNS-Set/master/DNSSet.sh
 
-sudo chmod +x main.sh 
+sudo chmod +x DNSSet.sh
 
-sudo ./main.sh
+sudo ./DNSSet.sh
+
 ```
 
 <details>
