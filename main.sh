@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install cowsay -y
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
-sleep 3
+sleep 1
 echo " "
 echo " "
 sudo apt update > /dev/null && sudo apt install resolvconf -y > /dev/null
