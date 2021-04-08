@@ -28,7 +28,11 @@ Although there maybe GUI alternatives, this simple script WORKS and thats all th
 resolvconf to set the DNS
 systemctl to start it
 sudo to access the needed files
+Cowsay to make the friendly Tux at the top
 
 ## Warning
 
 This script is not a toy and should be treated with respect or you could end up unable to connect to internet
+
+Please note that this script may seem to be stopped as it installs the required packages.
+Also it clears after each stage to clean the terminal.
