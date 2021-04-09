@@ -1,27 +1,30 @@
 #!/bin/bash
 sudo apt install cowsay -y
-clear
+clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
+echo " "
+echo " "
+echo "Scroll up at any point to see outputs of commands"
 sleep 1
 echo " "
 echo " "
-sudo apt update > /dev/null && sudo apt install resolvconf -y > /dev/null
-clear
-sudo systemctl enable resolvconf.service > /dev/null && sudo systemctl start resolvconf.service > /dev/null
-clear
+sudo apt update > /dev/null && clear -x && sudo apt install resolvconf -y > /dev/null
+clear -x
+sudo systemctl enable resolvconf.service > /dev/null && clear -x  && sudo systemctl start resolvconf.service > /dev/null
+clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 echo "Step 2"
 echo " "
 echo " "
 read -p "Enter DNS IP Primary: " ip1
 echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
-clear
+clear -x
 sudo systemctl restart resolvconf.service > /dev/null 
-clear
+clear -x
 sudo resolvconf --enable-updates > /dev/null 
 clear
 sudo resolvconf -u > /dev/null 
-clear
+clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 echo "Step 3"
 echo ""
@@ -34,11 +37,11 @@ if [ $ans = "exit" ]; then
     exit
 else 
     sudo echo "nameserver $ans" >> /etc/resolvconf/resolv.conf.d/head
-    clear
+    clear -x
     sudo systemctl restart resolvconf.service > /dev/null 
-    clear
+    clear -x
     sudo resolvconf --enable-updates > /dev/null 
-    clear
+    clear -x
     sudo resolvconf -u > /dev/null 
-    clear
+    clear -x
 fi
