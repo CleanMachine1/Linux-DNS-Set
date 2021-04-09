@@ -10,7 +10,7 @@ echo " "
 echo " "
 sudo apt update > /dev/null && clear -x && sudo apt install resolvconf -y > /dev/null
 clear -x
-sudo systemctl enable resolvconf.service > /dev/null && clear -x  && sudo systemctl start resolvconf.service > /dev/null
+sudo systemctl enable resolvconf.service > /dev/null && clear -x && sudo systemctl start resolvconf.service > /dev/null
 clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 echo "Step 2"
