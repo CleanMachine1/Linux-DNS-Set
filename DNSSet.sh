@@ -1,6 +1,18 @@
 #!/bin/bash
 sudo apt install cowsay -y
 clear -x
+
+if [[ $(echo $USER) != "root" ]]; then
+  echo "You have started this script without using sudo"
+  sleep 0.5
+  echo "The command you used needs to have a sudo before it "
+  sleep 4
+  echo "Exiting, please rerun with sudo"
+  sleep 2
+  exit
+fi 
+
+
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
 echo " "
 echo " "
