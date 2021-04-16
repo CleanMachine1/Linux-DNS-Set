@@ -1,4 +1,4 @@
-## <b>Installation</b>
+## <b>Installation and Usage</b>
 
 Open a terminal - Type the following commands (Or copy) -
 ```
@@ -30,9 +30,20 @@ systemctl to start it
 sudo to access the needed files
 Cowsay to make the friendly Tux at the top
 
+## <b>Removal</b>
+
+There isn't really a way to uninstall (if you can find one please inform me), however running the script again and entering 127.0.0.1 as the IP should revert to using what your network says to use.
+
+You may just want to consider just changing it to 8.8.8.8 and 8.8.4.4 (Google Public DNS)
+as this is a pretty good DNS server to use.
+
+However the DNSSet.sh script can be removed at any time and reinstalled without any consequences, although unless reinstalled you or you are confident with the command line, you wont be able to change your DNS easily like this script
+
 ## Warning
 
 This script is not a toy and should be treated with respect or you could end up unable to connect to internet
 
 Please note that this script may seem to be stopped as it installs the required packages.
 Also it clears after each stage to clean the terminal.
+
+<b> If you do make any mistakes, run the script again then enter your DNS server you want, if you want default, enter 127.0.0.1 then exit at the next prompt. </b>
