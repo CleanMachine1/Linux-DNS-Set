@@ -26,8 +26,11 @@ Although there maybe GUI alternatives, this simple script WORKS and thats all th
 ## What it uses 
 
 resolvconf to set the DNS
+
 systemctl to start it
+
 sudo to access the needed files
+
 Cowsay to make the friendly Tux at the top
 
 ## <b>Removal</b>
