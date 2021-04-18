@@ -1,7 +1,10 @@
+# Linux-DNS-Set
+
 ## <b>Installation and Usage</b>
 
 Open a terminal - Type the following commands (Or copy) -
-```
+
+``` bash
 wget https://raw.githubusercontent.com/CleanMachine1/Linux-DNS-Set/master/DNSSet.sh
 
 sudo chmod +x DNSSet.sh
@@ -23,7 +26,7 @@ This saves having to try and find a guide online or run loads of commands.
 
 Although there maybe GUI alternatives, this simple script WORKS and thats all that matters.
 
-## What it uses 
+## What it uses
 
 resolvconf to set the DNS
 
