@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install cowsay -y
+
 clear -x
 
 if [[ $(echo $USER) != "root" ]]; then
@@ -7,10 +7,22 @@ if [[ $(echo $USER) != "root" ]]; then
   sleep 0.5
   echo "The command you used needs to have a sudo before it "
   sleep 4
-  echo "Exiting, please rerun with sudo"
+  echo "Exiting, please re-run with sudo"
   sleep 2
   exit
 fi 
+
+if ! command -v /usr/games/cowsay >/dev/null; then
+    echo "Installing cowsay" 
+    sudo apt install cowsay -y >/dev/null
+
+fi
+
+if ! command -v resolvconf >/dev/null; then
+echo "Installing resolvconf"
+    sudo apt install resolvconf -y >/dev/null
+fi
+
 
 
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
