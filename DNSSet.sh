@@ -19,7 +19,7 @@ if ! command -v /usr/games/cowsay >/dev/null; then
 fi
 
 if ! command -v resolvconf >/dev/null; then
-echo "Installing resolvconf"
+    echo "Installing resolvconf"
     sudo apt install resolvconf -y >/dev/null
 fi
 
@@ -32,7 +32,6 @@ echo "Scroll up at any point to see outputs of commands"
 sleep 1
 echo " "
 echo " "
-sudo apt update > /dev/null && clear -x && sudo apt install resolvconf -y > /dev/null
 clear -x
 sudo systemctl enable resolvconf.service > /dev/null && clear -x && sudo systemctl start resolvconf.service > /dev/null
 clear -x
