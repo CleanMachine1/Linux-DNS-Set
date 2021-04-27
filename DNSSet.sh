@@ -3,11 +3,11 @@
 clear -x
 
 if [[ $(echo $USER) != "root" ]]; then
-  echo "You have started this script without using sudo"
+  echo "You have started this script without using root access"
   sleep 0.5
-  echo "The command you used needs to have a sudo before it "
+  echo "The command you used needs to have a sudo"
   sleep 4
-  echo "Exiting, please re-run with sudo"
+  echo "Exiting, please re-run with sudo or as root"
   sleep 2
   exit
 fi 
