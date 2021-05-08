@@ -4,7 +4,7 @@
 
 Open a terminal - Type the following commands (Or copy) -
 
-``` bash
+```bash
 wget https://raw.githubusercontent.com/CleanMachine1/Linux-DNS-Set/master/DNSSet.sh
 
 sudo chmod +x DNSSet.sh
