@@ -29,6 +29,8 @@ systemctl to start it
 
 sudo to make changes and write to specific files
 
+dd for clearing the resolvconf file
+
 cowsay to make the friendly Tux at the top
 
 ## __Removal__
