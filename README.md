@@ -1,6 +1,6 @@
 # Linux-DNS-Set
 
-## <b>Installation and Usage</b>
+## __Installation and Usage__
 
 Open a terminal - Type the following commands (Or copy) -
 
@@ -12,11 +12,6 @@ sudo chmod +x DNSSet.sh
 sudo ./DNSSet.sh
 
 ```
-
-<details>
-<summary>Why do I need Sudo</summary>
-due to the files being in /etc/ they often require root access, this means this script will not work if you don't have access to sudo or root
-</details>
 
 ## Overview
 
@@ -32,18 +27,15 @@ resolvconf to set the DNS
 
 systemctl to start it
 
-sudo to access the needed files
+sudo to make changes and write to specific files
 
-Cowsay to make the friendly Tux at the top
+cowsay to make the friendly Tux at the top
 
-## <b>Removal</b>
+## __Removal__
 
-There isn't really a way to uninstall (if you can find one please inform me), however running the script again and entering 127.0.0.1 as the IP should revert to using what your network says to use.
+Whilst I am sure you could remove resolvconf, it is probably a dependency for something.
 
-You may just want to consider just changing it to 8.8.8.8 and 8.8.4.4 (Google Public DNS)
-as this is a pretty good DNS server to use.
-
-However the DNSSet.sh script can be removed at any time and reinstalled without any consequences, although unless reinstalled you or you are confident with the command line, you wont be able to change your DNS easily like this script
+The best option is to run the command again and for default use 127.0.0.1 or for a reliable DNS use something like Google (8.8.8.8 & 8.8.4.4) or CloudFlare (1.1.1.1)
 
 ## Warning
 
@@ -52,4 +44,4 @@ This script is not a toy and should be treated with respect or you could end up 
 Please note that this script may seem to be stopped as it installs the required packages.
 Also it clears after each stage to clean the terminal.
 
-<b> If you do make any mistakes, run the script again then enter your DNS server you want, if you want default, enter 127.0.0.1 then exit at the next prompt. </b>
+__If you do make any mistakes, run the script again then enter your DNS server you want, if you want default, enter 127.0.0.1 then exit at the next prompt.__
