@@ -40,7 +40,8 @@ echo "Step 2"
 echo " "
 echo " "
 read -p "Enter DNS IP Primary: " ip1
-echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
+sudo dd if=/dev/null of=/etc/resolvconf/resolv.conf.d/head
+echo "nameserver $ip1" | sudo tee /etc/resolvconf/resolv.conf.d/head
 clear -x
 sudo systemctl restart resolvconf.service > /dev/null 
 clear -x
@@ -59,7 +60,7 @@ read -p "Input: " ans
 if [ $ans = "exit" ]; then
     exit
 else 
-    sudo echo "nameserver $ans" >> /etc/resolvconf/resolv.conf.d/head
+    echo "nameserver $ans" | sudo tee -a /etc/resolvconf/resolv.conf.d/head
     clear -x
     sudo systemctl restart resolvconf.service > /dev/null 
     clear -x
