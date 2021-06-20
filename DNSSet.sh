@@ -2,16 +2,6 @@
 
 clear -x
 
-if [[ $(echo $USER) != "root" ]]; then
-  echo "You have started this script without using root access"
-  sleep 0.5
-  echo "The command you used needs to have a sudo"
-  sleep 4
-  echo "Exiting, please re-run with sudo or as root"
-  sleep 2
-  exit
-fi 
-
 if ! command -v /usr/games/cowsay >/dev/null; then
     echo "Installing cowsay" 
     sudo apt install cowsay -y >/dev/null
@@ -46,7 +36,7 @@ clear -x
 sudo systemctl restart resolvconf.service > /dev/null 
 clear -x
 sudo resolvconf --enable-updates > /dev/null 
-clear
+clear -x
 sudo resolvconf -u > /dev/null 
 clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
