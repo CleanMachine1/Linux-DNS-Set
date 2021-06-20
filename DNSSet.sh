@@ -2,16 +2,6 @@
 
 clear -x
 
-if [[ $(echo $USER) != "root" ]]; then
-  echo "You have started this script without using root access"
-  sleep 0.5
-  echo "The command you used needs to have a sudo"
-  sleep 4
-  echo "Exiting, please re-run with sudo or as root"
-  sleep 2
-  exit
-fi 
-
 if ! command -v /usr/games/cowsay >/dev/null; then
     echo "Installing cowsay" 
     sudo apt install cowsay -y >/dev/null
@@ -40,12 +30,13 @@ echo "Step 2"
 echo " "
 echo " "
 read -p "Enter DNS IP Primary: " ip1
-echo "nameserver $ip1" > /etc/resolvconf/resolv.conf.d/head
+sudo dd if=/dev/null of=/etc/resolvconf/resolv.conf.d/head
+echo "nameserver $ip1" | sudo tee /etc/resolvconf/resolv.conf.d/head
 clear -x
 sudo systemctl restart resolvconf.service > /dev/null 
 clear -x
 sudo resolvconf --enable-updates > /dev/null 
-clear
+clear -x
 sudo resolvconf -u > /dev/null 
 clear -x
 /usr/games/cowsay -f tux "This script was made by CleanMachine1"
@@ -59,7 +50,7 @@ read -p "Input: " ans
 if [ $ans = "exit" ]; then
     exit
 else 
-    sudo echo "nameserver $ans" >> /etc/resolvconf/resolv.conf.d/head
+    echo "nameserver $ans" | sudo tee -a /etc/resolvconf/resolv.conf.d/head
     clear -x
     sudo systemctl restart resolvconf.service > /dev/null 
     clear -x
